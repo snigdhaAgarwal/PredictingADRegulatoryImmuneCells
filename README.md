@@ -36,6 +36,8 @@ To score SNPs using trained models. Usage: ![image](https://user-images.githubus
 -left: Number of nucleotides to add on left of SNP \
 -right: Number of nucleotides to add on right of SNP
 
+**checkVariants.ipynb**
+Used to identify AD SNPs that impact regulatory activity in each cell type. Also used to see correlation of Tanzi SNP scores as predicted by Easwaran's bulk models, SCATE peaks and Archr peaks. 
 
 ## Contact Information
 Snigdha Agarwal 
