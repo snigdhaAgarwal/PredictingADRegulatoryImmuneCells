@@ -9,11 +9,9 @@ if (args[1]=='hg19') {
   genome <- BSgenome.Hsapiens.UCSC.hg38.masked
 }
 print(args)
-genNullSeqs(paste(args[2],'.bed',sep=""), #"combined2pos.bed",'2_hg19.bed',
+genNullSeqs(paste(args[2],'.bed',sep=""), 
   genome=genome,
-  outputBedFN = paste(args[2],'-GCneg.bed',sep=""),#'combined2GC-neg.bed','test-neg.bed',
-  # outputPosFastaFN = paste(args[2],'.fa',sep=""),#'combined2pos.fa','test.fa',
-  # outputNegFastaFN = paste(args[2],'-neg.fa',sep=""),#'neg2GC-combined.fa','test-neg.fa',
+  outputBedFN = paste(args[2],'-GCneg.bed',sep=""),
   length_match_tol = 0, # want exact same length negatives
-  xfold = 1, # twice the number of negatives
+  xfold = 2, # twice the number of negatives
 	nMaxTrials=180)
