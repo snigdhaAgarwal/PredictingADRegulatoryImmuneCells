@@ -21,6 +21,7 @@ Contains the cluster information according to Satpathy group for each cell
 
 ### Matrix file
 Sparse matrix where first column is peak indices, second column is cell indices and third column is number of reads for that peak in that cell
+
 ![Screen Shot 2021-06-29 at 9 58 29 PM](https://user-images.githubusercontent.com/59067635/123890406-256f4a80-d925-11eb-8009-60e7ff4513fb.png)
 
 
