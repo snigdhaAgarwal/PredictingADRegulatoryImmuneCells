@@ -1,6 +1,30 @@
 # PredictingADRegulatoryImmuneCells
 Predicting regulatory activity of AD SNPs in Immune Cell types. Masters Thesis work done at Pfenning Lab @ CMU. Supervised by Andreas Pfenning, Easwaran Ramamurthy.
 
+## Section code guide
+
+### Single Label Regression
+
+#### Reads per million normalization (signal_extraction.py)
+saveClusterIndices(): To get the total read counts from the matrix file, we first get indices/row number of each cell in a cluster. The indices would tell us which value in the 2nd column  of the matrix file to access. 
+
+generateSignals(): Converts the sparse matrix to a peak by cell matrix populated by read counts. The schematic below shows such a matrix where the colors are different clusters. To get a peak's signal in a cluster, sum up the read counts for all the cells in that cluster. To get RPM, multiply with a million and divide by the total reads for all the cells in the cluster.
+
+![Screen Shot 2021-06-29 at 10 12 55 PM](https://user-images.githubusercontent.com/59067635/123891611-299c6780-d927-11eb-930f-92035a470006.png)
+  
+
+## Data Preview
+
+### Barcodes file
+Contains the cluster information according to Satpathy group for each cell
+![Screen Shot 2021-06-29 at 9 55 59 PM](https://user-images.githubusercontent.com/59067635/123890180-cc9fb200-d924-11eb-8fdf-78d406dfcf12.png)
+
+### Matrix file
+Sparse matrix where first column is peak indices, second column is cell indices and third column is number of reads for that peak in that cell
+![Screen Shot 2021-06-29 at 9 58 29 PM](https://user-images.githubusercontent.com/59067635/123890406-256f4a80-d925-11eb-8009-60e7ff4513fb.png)
+
+
+
 ## Files Guide
 
 **cnn.py**
